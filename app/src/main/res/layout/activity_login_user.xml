@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".LoginUserActivity"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="20dp"
     android:weightSum="100"
-    android:background="@color/aqua"
-    tools:context=".LoginPhoneNumber">
+    android:background="@color/aqua">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +21,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/circlular_bg"
-            android:backgroundTint="@color/blue">
-            
+            android:backgroundTint="@color/other">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/circlular_bg"
-            android:backgroundTint="@color/other">
+            android:backgroundTint="@color/blue">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,44 +65,36 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/phone_icon"
+        android:src="@drawable/user_icon"
         app:tint="@color/other"
         android:layout_weight="20"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter mobile phone no"
+        android:text="enter your username"
         android:textSize="30sp"
         android:gravity="center"
         android:textStyle="bold"
         android:layout_weight="5"/>
-    
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_weight="5">
-        
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/county_code"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:ccp_showFlag="false"
-            app:ccp_showNameCode="false"
-            />
 
         <EditText
-            android:id="@+id/mobile_number"
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:layout_margin="10dp"
             android:padding="5dp"
-            android:inputType="phone"
+            android:inputType="text"
             android:background="@drawable/edit_text_rounded"
-            android:hint="mobile"
+            android:hint="Username"
             android:elevation="5dp"
             android:textColor="@color/white"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -115,16 +107,16 @@
         android:padding="10dp">
 
         <Button
-            android:id="@+id/send_opt_btn"
+            android:id="@+id/finish_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="send OTP"
+            android:text="Finish"
             android:textSize="20sp"
             android:elevation="5dp"
             android:backgroundTint="@color/blue"/>
 
         <ProgressBar
-            android:id="@+id/mobile_number_loader"
+            android:id="@+id/user_loader"
             android:layout_marginTop="20dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
